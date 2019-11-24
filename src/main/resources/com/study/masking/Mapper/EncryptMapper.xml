@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.masking.Mapper.EncryptMapper">
+    <select id="select" resultType="java.util.Map">
+        SELECT
+            '1' as '1'
+        <foreach item="value" collection="conditionItem">
+            ,CONCAT(UPPER('${value}'),'1') as '${value}'
+        </foreach>
+    </select>
+</mapper>
