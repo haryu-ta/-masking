@@ -9,7 +9,11 @@ import org.springframework.boot.runApplication
 class MaskingApplication(private val service : ReadXMLService) : CommandLineRunner {
 
 	override fun run(vararg args: String?) {
-		service.readXml()
+
+		// マスキング項目を取得
+		val maskList : List<String> = service.readSettingFile()
+		service.readXml(maskList)
+
 	}
 }
 
