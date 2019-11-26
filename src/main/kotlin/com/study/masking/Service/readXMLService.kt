@@ -130,6 +130,18 @@ class ReadXMLService(private val encryptDao : EncryptMapper,private val commonCo
                         colList.add(it.toUpperCase())
                     }
         }
+
+        //        val map = colList.groupBy ({
+        //            it -> it.split("@")[0]
+        //        },{it.split("@")[1]})
+        //
+        //        for((key,content) in map.entries ){
+        //            println("=====${key}=====")
+        //            for(item in content){
+        //                println(item)
+        //            }
+        //        }
+
         return colList
     }
 
