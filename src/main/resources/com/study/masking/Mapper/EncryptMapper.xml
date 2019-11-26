@@ -3,7 +3,7 @@
 <mapper namespace="com.study.masking.Mapper.EncryptMapper">
     <select id="select" resultType="java.util.Map">
         SELECT
-            '1' as '1'
+            'dummycolumn' as 'dummycolumn'
         <foreach item="value" collection="conditionItem">
             ,CONCAT(UPPER('${value}'),'1') as '${value}'
         </foreach>
